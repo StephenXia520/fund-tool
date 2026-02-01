@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>我的基金持仓实时估值工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>基金持仓实时估值</h1>
+            <button class="edit-btn" id="editBtn">编辑我的持仓</button>
+        </header>
+
+        <!-- 持仓总览 -->
+        <div class="total-card" id="totalCard">
+            <div class="total-item">
+                <p>总市值(元)</p >
+                <h3 id="totalValue">0.00</h3>
+            </div>
+            <div class="total-item">
+                <p>总收益(元)</p >
+                <h3 id="totalProfit" class="profit">+0.00</h3>
+            </div>
+            <div class="total-item">
+                <p>总收益率</p >
+                <h3 id="totalRate" class="profit">+0.00%</h3>
+            </div>
+        </div>
+
+        <!-- 基金列表 -->
+        <div class="fund-list" id="fundList">
+            <div class="fund-item placeholder">
+                暂无持仓，点击「编辑我的持仓」添加基金
+            </div>
+        </div>
+
+        <!-- 编辑持仓弹窗 -->
+        <div class="modal-mask" id="modalMask"></div>
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h3>编辑持仓信息</h3>
+                <button class="close-btn" id="closeBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <textarea id="fundText" placeholder="按格式填写：&#10;基金代码,持仓份额,持仓成本&#10;示例：&#10;005827,1000,1.25&#10;012345,500,2.80&#10;注：英文逗号分隔，无单位"></textarea>
+                <p class="tip">格式错误会导致加载失败，请严格按示例填写！</p >
+            </div>
+            <div class="modal-footer">
+                <button id="cancelBtn">取消</button>
+                <button id="saveBtn">保存持仓</button>
+            </div>
+        </div>
+
+        <!-- 刷新提示 -->
+        <div class="refresh-tip" id="refreshTip">下拉可刷新实时估值</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
