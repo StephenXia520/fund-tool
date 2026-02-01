@@ -1,2 +1,2 @@
 # fund-tool
-基金
+jijin
