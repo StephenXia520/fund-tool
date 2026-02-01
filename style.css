@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+body {
+    background-color: #f5f7fa;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+.header h1 {
+    font-size: 18px;
+    color: #333;
+}
+.edit-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.total-card {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+}
+.total-item {
+    text-align: center;
+}
+.total-item p {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.total-item h3 {
+    font-size: 16px;
+    color: #333;
+}
+.profit {
+    color: #dc3545 !important;
+}
+.profit.plus {
+    color: #28a745 !important;
+}
+.fund-list {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.fund-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 12px 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.placeholder {
+    text-align: center;
+    color: #999;
+    padding: 30px 0;
+}
+.fund-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.fund-code {
+    color: #999;
+    font-size: 12px;
+}
+.fund-name {
+    font-weight: 500;
+    color: #333;
+    flex: 1;
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.fund-now {
+    font-size: 16px;
+    font-weight: 600;
+}
+.fund-change {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+.change-rate {
+    color: #dc3545;
+}
+.change-rate.plus {
+    color: #28a745;
+}
+.fund-hold {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.hold-cost {
+    color: #666;
+}
+.hold-profit {
+    font-weight: 500;
+    color: #dc3545;
+}
+.hold-profit.plus {
+    color: #28a745;
+}
+/* 弹窗样式 */
+.modal-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 99;
+    display: none;
+}
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: 100;
+    display: none;
+}
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header h3 {
+    font-size: 16px;
+    color: #333;
+}
+.close-btn {
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+}
+.modal-body {
+    padding: 15px;
+}
+#fundText {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    resize: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.tip {
+    font-size: 12px;
+    color: #dc3545;
+}
+.modal-footer {
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.modal-footer button {
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#cancelBtn {
+    border: 1px solid #eee;
+    background: #fff;
+    color: #666;
+}
+#saveBtn {
+    border: none;
+    background: #007bff;
+    color: #fff;
+}
+/* 刷新提示 */
+.refresh-tip {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    margin-top: 10px;
+    display: none;
+}
+/* 手机端适配 */
+@media (max-width: 480px) {
+    .total-card {
+        padding: 10px 0;
+    }
+    .total-item h3 {
+        font-size: 14px;
+    }
+    .fund-now {
+        font-size: 14px;
+    }
+}
